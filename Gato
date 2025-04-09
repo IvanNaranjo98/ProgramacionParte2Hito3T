@@ -1,0 +1,20 @@
+package misPaquetes;
+//Clase Gato que hereda de Animal
+public class Gato extends Animal {
+    private boolean testLeucemia;
+    //Construct para Gato, su atributo y los heredados
+    public Gato(int numeroChip, String nombre, int edad, String raza, boolean adoptado, boolean testLeucemia) {
+        super(numeroChip, nombre, edad, raza, adoptado);
+        this.testLeucemia = testLeucemia;
+    }
+
+    @Override
+    public void mostrar() {
+        System.out.println("Gato - Chip: " + getNumeroChip() + ", Nombre: " + getNombre() + ", Edad: " + getEdad() + ", Raza: " + getRaza() + ", Adoptado: " + (esAdoptado() ? "Sí" : "No") +
+                          ", Test Leucemia: " + (testLeucemia ? "Positivo" : "Negativo"));
+    }
+    //Metodo para devolver si o no
+    public boolean getTestLeucemia() {
+        return testLeucemia;
+    }
+}
