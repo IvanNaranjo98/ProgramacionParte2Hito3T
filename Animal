@@ -1,0 +1,43 @@
+package misPaquetes;
+//Clase abstracta Animal
+public abstract class Animal {
+    private int numeroChip;
+    private String nombre;
+    private int edad;
+    private String raza;
+    private boolean adoptado;
+//Construct para Animal y sus atibutos
+    public Animal(int numeroChip, String nombre, int edad, String raza, boolean adoptado) {
+        this.numeroChip = numeroChip;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.raza = raza;
+        this.adoptado = adoptado;
+    }
+    //Metodo mostrar() que heredan Perro y Gato
+    public abstract void mostrar();
+    //Metodo que devuelve el número del chip
+    public int getNumeroChip() {
+        return numeroChip;
+    }
+    //Metodo esAdoptado() que devuelve un verdadero o falso
+    public boolean esAdoptado() {
+        return adoptado;
+    }
+    //Metodo getNombre() que devuelve el nombre
+    public String getNombre() {
+        return nombre;
+    }
+    //Metodo getEdad( que devuelve la edad
+    public int getEdad() {
+        return edad;
+    }
+    //Metodo getRaza() que devuelve el tipo de raza
+    public String getRaza() {
+        return raza;
+    }
+    //Metodo para poder cambiar el estado de adopción 
+    public void setAdoptado(boolean adoptado) {
+        this.adoptado = adoptado;
+    }
+}
