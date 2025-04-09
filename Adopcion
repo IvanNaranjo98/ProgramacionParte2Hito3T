@@ -1,0 +1,30 @@
+package misPaquetes;
+
+// Clase para gestionar la información la adopción
+public class Adopcion {
+    private Animal animal;
+    private String nombreAdoptante;
+    private String dniAdoptante;
+
+    // Constructor para adopción y sus atributos
+    public Adopcion(Animal animal, String nombreAdoptante, String dniAdoptante) {
+        this.animal = animal;
+        this.nombreAdoptante = nombreAdoptante;
+        this.dniAdoptante = dniAdoptante;
+    }
+
+    // Método para mostrar la información de la adopción
+    public void mostrar() {
+        System.out.println("Adopción - Nombre Adoptante: " + nombreAdoptante + ", DNI: " + dniAdoptante);
+        animal.mostrar();
+    }
+
+    // Getters
+    public Animal getAnimal() {
+        return animal;
+    }
+
+    public String getDniAdoptante() {
+        return dniAdoptante;
+    }
+}
